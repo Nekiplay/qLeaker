@@ -1,0 +1,82 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="qLeaker.Views.Minecraft_Plugins"
+        CanResize="False"
+		TransparencyLevelHint="AcrylicBlur"
+        Background="Transparent"
+		WindowState="Normal"
+		MaxWidth="1180"
+		Title="qGarry"
+		WindowStartupLocation="CenterScreen"
+		ExtendClientAreaChromeHints="NoChrome"
+		ExtendClientAreaToDecorationsHint="True">
+	
+	<Design.DataContext>
+	</Design.DataContext>
+
+	<Panel>
+		<Image Source="/Assets/download.png" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="5, 5, 5, 5" Height="16" Width="16"/>
+		<TextBlock PointerPressed="MoveForm" Text="qLeaker downloader by Neki_play" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25, 5, 5, 5"/>
+
+		<Button Width="30" Height="30" Click="Close" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="5, 5, 5, 5" Background="Transparent">
+			<TextBlock TextAlignment="Center" Text="×" Margin="0,0,0,0"/>
+		</Button>
+		<Button Width="30" Height="30" Click="Back" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="5, 5, 45, 5" Background="Transparent">
+			<TextBlock TextAlignment="Center" Text="⬅" Margin="0,0,0,0"/>
+		</Button>
+
+		<CheckBox IsChecked="true" Click="CategoryClick" x:Name="AnticheatCheckBox" Margin="310, 10, 0, 0" HorizontalAlignment="Left" VerticalAlignment="Top">
+			<TextBlock TextAlignment="Center" Text="Anticheat" Margin="0,0,0,0"/>
+		</CheckBox>
+
+		<CheckBox IsChecked="true" Click="CategoryClick" x:Name="MinigameCheckBox" Margin="310, 40, 0, 0" HorizontalAlignment="Left" VerticalAlignment="Top">
+			<TextBlock TextAlignment="Center" Text="Minigame" Margin="0,0,0,0"/>
+		</CheckBox>
+
+		<CheckBox IsChecked="true" Click="CategoryClick" x:Name="MiscCheckBox" Margin="410, 10, 0, 0" HorizontalAlignment="Left" VerticalAlignment="Top">
+			<TextBlock TextAlignment="Center" Text="Misc" Margin="0,0,0,0"/>
+		</CheckBox>
+
+		<CheckBox IsChecked="true" Click="CategoryClick" x:Name="GUICheckBox" Margin="410, 40, 0, 0" HorizontalAlignment="Left" VerticalAlignment="Top">
+			<TextBlock TextAlignment="Center" Text="Gui" Margin="0,0,0,0"/>
+		</CheckBox>
+
+		<CheckBox IsChecked="true" Click="CategoryClick" x:Name="PvECheckBox" Margin="475, 10, 0, 0" HorizontalAlignment="Left" VerticalAlignment="Top">
+			<TextBlock TextAlignment="Center" Text="PvE" Margin="0,0,0,0"/>
+		</CheckBox>
+		
+		<CheckBox IsChecked="true" Click="CategoryClick" x:Name="PvPCheckBox" Margin="470, 40, 0, 0" HorizontalAlignment="Left" VerticalAlignment="Top">
+			<TextBlock TextAlignment="Center" Text="PvP" Margin="0,0,0,0"/>
+		</CheckBox>
+
+		<TextBox x:Name="SearchBox" KeyDown="SearchInput" Tag="Search" Text="Search" LostFocus="AddText" GotFocus="RemoveText" Margin="19, 35, 0, 0" Height="15" Width="280" VerticalAlignment="Top" HorizontalAlignment="Left">	</TextBox>
+
+		<Panel Margin="15, 65, 5, 5">
+			<ScrollViewer ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto" Padding="0" Margin="0, 5, 0, 0">
+				<StackPanel>
+					<Grid x:Name="Items" DockPanel.Dock="Left" HorizontalAlignment="Left" VerticalAlignment="Top">
+						<Grid.RowDefinitions>
+							<RowDefinition Height="Auto"/>
+							<RowDefinition Height="Auto"/>
+							<RowDefinition Height="Auto"/>
+							<RowDefinition Height="Auto"/>
+						</Grid.RowDefinitions>
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width="*" />
+							<ColumnDefinition Width="*" />
+							<ColumnDefinition Width="*" />
+							<ColumnDefinition Width="*" />
+						</Grid.ColumnDefinitions>
+
+
+					</Grid>
+				</StackPanel>
+
+
+			</ScrollViewer>
+		</Panel>
+	</Panel>
+</Window>

@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "bdAdded", "ConsoleApp1\bdAdded.csproj", "{99E73341-4CDC-4161-B517-FAA70E927471}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CloudLibrary", "CloudLibrary\CloudLibrary.csproj", "{774A7146-4E28-429F-A2D0-1D8C0ECBA274}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "qLeaker", "qLeaker\qLeaker.csproj", "{5ED53172-5FE2-4655-B2AB-175631E78339}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{99E73341-4CDC-4161-B517-FAA70E927471}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99E73341-4CDC-4161-B517-FAA70E927471}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99E73341-4CDC-4161-B517-FAA70E927471}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99E73341-4CDC-4161-B517-FAA70E927471}.Release|Any CPU.Build.0 = Release|Any CPU
+		{774A7146-4E28-429F-A2D0-1D8C0ECBA274}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{774A7146-4E28-429F-A2D0-1D8C0ECBA274}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{774A7146-4E28-429F-A2D0-1D8C0ECBA274}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{774A7146-4E28-429F-A2D0-1D8C0ECBA274}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5ED53172-5FE2-4655-B2AB-175631E78339}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5ED53172-5FE2-4655-B2AB-175631E78339}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5ED53172-5FE2-4655-B2AB-175631E78339}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5ED53172-5FE2-4655-B2AB-175631E78339}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9F8731A3-40B0-4837-9976-20905E0F2B1C}
+	EndGlobalSection
+EndGlobal
