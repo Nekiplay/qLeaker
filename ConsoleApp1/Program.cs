@@ -9,6 +9,10 @@ namespace ConsoleApp1
 {
     internal class Program
     {
+        public static bool ContainsIgnoreCase(string text, string find)
+        {
+            return text.IndexOf(find, StringComparison.OrdinalIgnoreCase) >= 0;
+        }
         static qList qList1 = new qList();
         static qList qList2 = new qList();
         static qList qList3 = new qList();
@@ -119,15 +123,22 @@ namespace ConsoleApp1
 
             if (add_new)
             {
-                if (gmod)
+                Console.Write("Garry's mod addon или Spigot plugin: ");
+                string ans1 = Console.ReadLine();
+                if (ContainsIgnoreCase(ans1, "gmod") ||  ContainsIgnoreCase(ans1, "garry's mod") || ContainsIgnoreCase(ans1, "addon"))
                 {
                     GmodAddon addon = new GmodAddon();
-                    addon.name = "xInventory - Inventory and Trading System";
-                    addon.types = new List<GmodAddon.Type>() { GmodAddon.Type.Inventory };
-                    addon.image = ImageTool.ImageFromUrl("https://i.ibb.co/gSTMFtj/3e6e779e4a9f9ca6cb59579bd6c6448d.jpg");
-                    addon.store = new Store("Gmodstore", "https://www.gmodstore.com/market/view/xinventory-inventory-and-trading-system-2");
-                    addon.content = "https://steamcommunity.com/sharedfiles/filedetails/?id=2061339328";
-                    addon.download = "https://github.com/Nekiplay/GmodAddons/raw/main/files/xinventory.zip";
+                    Console.Write("Addon name: ");
+                    addon.name = Console.ReadLine();
+                    addon.types = new List<GmodAddon.Type>() { GmodAddon.Type.None };
+                    Console.Write("Addon logo: ");
+                    addon.image = ImageTool.ImageFromUrl(Console.ReadLine());
+                    Console.Write("Addon gmodstore: ");
+                    addon.store = new Store("Gmodstore", Console.ReadLine());
+                    Console.Write("Addon content: ");
+                    addon.content = Console.ReadLine();
+                    Console.Write("Addon download: ");
+                    addon.download = Console.ReadLine();
 
                     bool find = false;
                     foreach (qList qList in lists)
@@ -148,19 +159,26 @@ namespace ConsoleApp1
                         Save(gmod_addon_slot, addon);
                     }
                 }
-                else
+                else if (ContainsIgnoreCase(ans1, "plugin"))
                 {
                     bool find = false;
                     MinecraftPlugin minecraftPlugin = new MinecraftPlugin();
-                    minecraftPlugin.name = "cPractice";
-                    minecraftPlugin.version = "1.1.4";
-                    minecraftPlugin.mcversion = "1.7 - 1.8";
-                    minecraftPlugin.extension = ".zip";
-                    minecraftPlugin.types = new List<MinecraftPlugin.Type>() { MinecraftPlugin.Type.PvP, MinecraftPlugin.Type.Minigame };
-                    minecraftPlugin.store = new Store("Spigot", "");
-                    minecraftPlugin.image = ImageTool.ImageFromUrl("https://i.ibb.co/Bcft6Jq/5684-1.png");
+                    Console.Write("Plugin name: ");
+                    minecraftPlugin.name = Console.ReadLine();
+                    Console.Write("Plugin version: ");
+                    minecraftPlugin.version = Console.ReadLine();
+                    Console.Write("Plugin minecraft version: ");
+                    minecraftPlugin.mcversion = Console.ReadLine();
+                    Console.Write("Plugin extension: ");
+                    minecraftPlugin.extension = Console.ReadLine();
+                    minecraftPlugin.types = new List<MinecraftPlugin.Type>() { MinecraftPlugin.Type.Misc };
+                    Console.Write("Plugin spigot: ");
+                    minecraftPlugin.store = new Store("Spigot", Console.ReadLine());
+                    Console.Write("Plugin image: ");
+                    minecraftPlugin.image = ImageTool.ImageFromUrl(Console.ReadLine());
                     minecraftPlugin.java = MinecraftPlugin.Java.Any;
-                    minecraftPlugin.download = "https://github.com/Nekiplay/MCAddons/raw/main/files/cPractice_1.1.4.zip";
+                    Console.Write("Plugin download: ");
+                    minecraftPlugin.download = Console.ReadLine();
 
                     foreach (qList qList in lists)
                     {

@@ -133,6 +133,10 @@ namespace qLeaker.Views
         }
         public Minecraft_Plugins()
         {
+            this.Closing += (o, c) =>
+            {
+                Process.GetCurrentProcess().Kill();
+            };
             InitializeComponent();
         }
         public void LoadAll()
@@ -264,7 +268,7 @@ namespace qLeaker.Views
 
                         byte[] dw = wc.DownloadData(plugin.download);
                         byte[] decrypted = byteCryptor.Decrypt(dw);
-                        string file_path = "Download\\MC\\" + plugin.version + " v" + plugin.version + plugin.extension;
+                        string file_path = "Download\\MC\\" + plugin.name + " v" + plugin.version + plugin.extension;
                         File.Create(file_path).Close();
                         File.WriteAllBytes(file_path, decrypted);
                     }

@@ -9,6 +9,7 @@
         Background="Transparent"
 		WindowState="Normal"
 		MaxWidth="1180"
+		Icon="/Assets/packing.ico"
 		Title="qGarry"
 		WindowStartupLocation="CenterScreen"
 		ExtendClientAreaChromeHints="NoChrome"
@@ -18,7 +19,7 @@
 	</Design.DataContext>
 
 	<Panel>
-		<Image Source="/Assets/download.png" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="5, 5, 5, 5" Height="16" Width="16"/>
+		<Image Source="/Assets/packing.png" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="5, 5, 5, 5" Height="16" Width="16"/>
 		<TextBlock PointerPressed="MoveForm" Text="qLeaker downloader by Neki_play" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25, 5, 5, 5"/>
 
 		<Button Width="30" Height="30" Click="Close" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="5, 5, 5, 5" Background="Transparent">

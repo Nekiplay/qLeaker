@@ -6,6 +6,7 @@
     <!--Avalonia doesen't support TrimMode=link currently,but we are working on that https://github.com/AvaloniaUI/Avalonia/issues/6892 -->
     <TrimMode>copyused</TrimMode>
     <BuiltInComInteropSupport>true</BuiltInComInteropSupport>
+    <ApplicationIcon>packing.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Folder Include="Models\" />
@@ -14,6 +15,11 @@
     <None Remove="Assets\capsule_616x353.jpg" />
     <None Remove="Assets\download.png" />
     <None Remove="Assets\ezgif.com-gif-maker.png" />
+    <None Remove="Assets\packing.ico" />
+    <None Remove="Assets\packing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packing.ico" />
   </ItemGroup>
   <ItemGroup>
     <!--This helps with theme dll-s trimming.
